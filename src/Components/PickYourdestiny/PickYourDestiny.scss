@@ -132,7 +132,6 @@
 
             .planet_infos {
                 grid-area: planet-infos;
-                overflow: hidden;
                 .planet_infos-name{
                     font-size: 9rem;
                     color: $--principal-white;

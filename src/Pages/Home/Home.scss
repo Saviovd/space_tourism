@@ -207,8 +207,10 @@
         }
 
         @media (max-width: 580px) {
-            overflow: scroll;
             background-image: url('../../../public/assets/home/background-home-mobile.jpg');
+        }
+        @media (max-width: 350px) {
+            overflow: scroll;
         }
     }
 }
