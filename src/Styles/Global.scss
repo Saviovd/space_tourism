@@ -10,7 +10,6 @@ $--principal-white-opacity: #ffffff3c;
 
 *{
     font-size: 10px;
-    background-color: $--principal-black;
     
     body {
         width: 100%;
@@ -18,6 +17,8 @@ $--principal-white-opacity: #ffffff3c;
         padding: 0;
         box-sizing: border-box;
         overflow: hidden;
+        background-color: $--principal-black;
+
 
         
         li {

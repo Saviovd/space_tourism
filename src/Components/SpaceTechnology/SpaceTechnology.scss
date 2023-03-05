@@ -74,6 +74,18 @@
                         width: 78px;
                         height: 78px;
                     }
+
+                    @media screen {
+                        @media (max-width: 350px) {
+                            width: 70px;
+                            height: 70px;
+
+                            &:active {
+                                width: 68px;
+                                height: 68px;
+                            }
+                        }
+                    }
                 }
                 
                 @media screen {
@@ -82,6 +94,9 @@
                         margin: 0 auto;
                         width: 350px;
                         height: auto;
+                    }
+                    @media (max-width: 350px) {
+                        width: 290px;
                     }
                 }
                 .active {
@@ -215,6 +230,9 @@
                 @media (max-width: 620px) {
                     grid-template-rows: 35% 15% 45%;
                     margin-top: 20px;
+                }
+                @media (max-width: 320px) {
+                    grid-template-rows: 30% 10% 60%;
                 }
             }
         }

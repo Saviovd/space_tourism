@@ -95,7 +95,7 @@
                     transform: translateX(50px);
                 }
                 @media (max-width: 760px) {
-                    transform: translate(0);
+                    transform: translate(0, 15px);
                     text-align: center;
                 }
             }
@@ -172,6 +172,7 @@
                             width: 220px;
                         }
                     }
+
                 }
             }
 
@@ -206,6 +207,7 @@
         }
 
         @media (max-width: 580px) {
+            overflow: scroll;
             background-image: url('../../../public/assets/home/background-home-mobile.jpg');
         }
     }

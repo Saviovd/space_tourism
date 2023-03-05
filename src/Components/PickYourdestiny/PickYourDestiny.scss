@@ -67,7 +67,13 @@
                     @media screen {
                         @media (max-width: 1024px) {
                             min-width: 230px;
+                            // margin-top: 30px; 
                         }
+                    }
+                }
+                @media screen {
+                    @media (max-width: 1024px) {
+                        margin-top: 30px; 
                     }
                 }
             }
@@ -126,7 +132,7 @@
 
             .planet_infos {
                 grid-area: planet-infos;
-
+                overflow: hidden;
                 .planet_infos-name{
                     font-size: 9rem;
                     color: $--principal-white;
@@ -137,6 +143,9 @@
                     @media screen {
                         @media (max-width: 1024px) {
                             font-size: 10rem;
+                        }
+                        @media (max-width: 600px) {
+                            font-size: 8.6rem;
                         }
                     }
                 }
@@ -157,7 +166,7 @@
                             min-width: 250px;
                         }
                         @media (max-width: 580px) {
-                            width: 60%;
+                            width: 90%;
                         }
                     }
                 }
@@ -230,7 +239,7 @@
 
                     @media screen {
                         @media (max-width: 1024px) {
-                            margin: 40px 0;
+                            margin: 40px 0 20px 0;
                         }
                         @media (max-width: 580px) {
                             grid-template-areas: 
@@ -267,22 +276,26 @@
             }
             @media (max-width: 1024px) {
                 padding: 0 25px;
-                height: 100%;
+                height: auto;
+                justify-content: normal;
+                max-height: none;
+                overflow: hidden;
             }
             @media (max-width: 600px) {
                 min-width: 300px;
+                padding: 0;
             }
         }
     }
     @media screen {
         @media (max-width: 1024px) {
-            overflow: scroll;
-            align-items: center;
+            // overflow: scroll;
+            align-items: flex-end;
 
-            justify-content: center;
+            justify-content: flex-end;
             text-align: center;
 
-            min-height: 1000px;
+            min-height: 1100px;
 
             background-image: url('../../../public/assets/destination/background-destination-tablet.jpg');
         }
