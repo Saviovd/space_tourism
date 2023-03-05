@@ -1,0 +1,246 @@
+@import '../../Styles/Global.scss';
+
+.SpaceTechnology {
+    width: 100%;
+    height: 100vh;
+    min-height: 740px;
+
+    background-image: url('../../../public/assets/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    .spacetechnology_container {
+        width: 100%;
+        max-width: 1800px;
+        margin: 0 auto;
+        height: 80%;
+        padding: 0 0 0 50px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+
+        .spacetechnology_box {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-areas: 
+            "list about tech-image"
+            ;
+            grid-template-columns: 10% 45% 45%;
+            grid-template-rows: none;
+            justify-content: space-between  ;
+
+            .technology_list {
+                grid-area: list;
+                padding: 0;
+                height: 320px;
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                align-self: center;
+                justify-self: flex-start;
+
+                .technology_list-number {
+                    font-size: 3rem;
+                    font-family: $--font-BarlowCondensed;
+                    background-color: transparent;
+                    border: 1px solid $--principal-white-opacity;
+                    color: $--principal-white;
+                    border-radius: 100%;
+                    cursor: pointer;
+
+                    width: 80px;
+                    height: 80px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    &:hover {
+                        border: 1px solid $--principal-white;
+                    }
+                    &:active {
+                        width: 78px;
+                        height: 78px;
+                    }
+                }
+                
+                @media screen {
+                    @media (max-width: 1200px) {
+                        flex-direction: row;
+                        margin: 0 auto;
+                        width: 350px;
+                        height: auto;
+                    }
+                }
+                .active {
+                    color: $--principal-black;
+                    background-color: $--principal-white;
+                }
+            }
+            
+            .technology_infos {
+                grid-area: about;
+                color: $--principal-white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .technology_infos-cta {
+                    font-size: 2.2rem;
+                    font-family: $--font-BarlowCondensed;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    color: $--secundary-white;
+
+                    @media screen {
+                        @media (max-width: 600px) {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+
+                .technology_infos-name {
+                    font-family: $--font-Bellefair;
+                    font-size: 5.2rem;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    margin: 15px 0 20px 0;
+                    @media screen {
+                        @media (max-width: 600px) {
+                            font-size: 4rem;
+                        }
+                    }
+                }
+
+                .technology_infos-description {
+                    margin: 0;
+                    font-family: $--font-BarlowCondensed;
+                    color: $--secundary-white;
+                    font-weight: 100;
+                    width: 420px;
+                    font-size: 2.15rem;
+                    line-height: 160%;
+
+                    @media screen {
+                        @media (max-width: 1200px) {
+                            width: 60%;
+                            margin: 0 auto;
+                            min-width: 550px;
+                        }
+                        @media (max-width: 600px) {
+                            width: 90%;
+                            min-width: 300px;
+                        }
+                    }
+                }
+
+                @media screen {
+                    @media (max-width: 1200px) {
+                        text-align: center;
+                    }
+                }
+            }
+            
+            .technology{
+                grid-area: tech-image;
+                position: relative;
+
+                .technology_image {
+                    position: absolute;
+                    bottom: 50px;
+                    height: 60vh;
+                    max-height: 600px;
+
+                    animation: enter 1.5s forwards;
+
+                    @keyframes enter {
+                        0% {
+                            position: absolute;
+                            right: -115%;
+                        }
+                        100% {
+                            right: 0;
+                        }
+                    }
+
+                    @media screen {
+                        @media (max-width: 1200px) {
+
+                            min-width: 0;
+                            min-height: 0;
+                            width: 100%;
+                            height: 100%;
+                            position: initial;
+                            object-fit: contain;
+                            animation: none;
+                        }
+                    }
+                }
+                @media screen {
+                    @media (max-width: 1200px) {
+                        position: initial;
+                    }
+                }
+            }
+
+            @media screen {
+                @media (max-width: 1200px) {
+                    grid-template-areas: 
+                        "tech-image"
+                        "list"
+                        "about"    
+                    ;
+                    grid-template-columns: 100%;
+                    grid-template-rows: 55% 10% 35%;
+                    max-height: none;
+                    height: 100%;
+                }
+                @media (max-width: 925px) {
+                    grid-template-rows: 47% 15% 37%;
+                    margin-top: 20px;
+                }
+                @media (max-width: 620px) {
+                    grid-template-rows: 35% 15% 45%;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        @media screen {
+            @media (max-width: 1300px) {
+                padding-left: 25px;
+            }
+            @media (max-width: 1200px) {
+                padding-left: 0;
+                height: 80%;
+            }
+            @media (max-width: 900px) {
+                height: 85%;
+            }
+        }
+    }
+
+    @media screen {
+        @media (max-width: 1200px) {
+            min-height: 1020px;
+            overflow-y: scroll;
+            background-image: url('../../../public/assets/technology/background-technology-tablet.jpg');
+        }
+        @media (max-width: 900px) {
+            min-height: 950px;
+        }
+    }
+}

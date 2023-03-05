@@ -1,0 +1,98 @@
+@import "../Header.scss";
+
+.navigation_item {
+    color: $--principal-white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    text-align: center;
+
+
+    
+    .navigatipon_item-anchor {
+        font-size: 1.8rem;
+        font-family: $--font-BarlowCondensed;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: lighter;
+
+
+        .navigation_item-number {
+            font-size: 1.8rem;
+            font-family: $--font-BarlowCondensed;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-right: 6px;
+            font-weight: bold;
+
+            @media screen {
+                @media (max-width: 700px) {
+                    font-size: 3rem;
+                }
+            } 
+        }
+
+        @media screen {
+            @media (max-width: 700px) {
+                font-size: 3rem;
+            }
+        }    
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 5px;
+        width: 0;
+        bottom: 0;
+        transition: 0.5s;
+        text-align: center;
+        background-color: rgba($--principal-white, 0.5);
+    }
+    &:hover::after {
+        width: 100%;
+    }
+
+    @media screen {
+        @media (max-width: 700px) {
+            transform: translate(50px, 150px);
+            height:80px;
+            width: 100%;
+            justify-content: flex-start;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 0;
+                right: 0;
+                transition: 0.5s;
+                text-align: center;
+                background-color: rgba($--principal-white, 0.5);
+            }
+            &:hover::after {
+                height: 100%;
+                width: 6px;
+            }
+        }
+    }
+}
+.active {
+    &::after {
+        width: 100%;
+        background-color: $--principal-white;
+    }
+
+    @media screen {
+        @media (max-width: 700px) {
+            &::after {
+                width: 5px;
+                height: 80%;
+                background-color: $--principal-white;
+            }
+        }
+    }
+}

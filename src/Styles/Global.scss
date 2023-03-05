@@ -1,0 +1,41 @@
+// Fonts
+$--font-BarlowCondensed: 'Barlow Condensed', sans-serif;
+$--font-Bellefair: 'Bellefair', sans-serif;
+// Colors
+$--principal-black: #0B0D17;
+$--principal-white: #FFFFFF;
+$--secundary-white: #D0D6F9;
+$--principal-white-opacity: #ffffff3c;
+
+
+*{
+    font-size: 10px;
+    
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        
+        li {
+            list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        h1,h2,h3,h4,h5 {
+            margin: 0;
+        }
+
+        @media screen {
+            @media (max-width: 1024px) {
+                overflow: auto;
+            }
+        }
+}
+}
+
+

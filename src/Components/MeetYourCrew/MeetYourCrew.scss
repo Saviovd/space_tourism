@@ -1,0 +1,215 @@
+@import '../../Styles/Global.scss';
+
+.MeetYourcrew {
+    width: 100%;
+    height: 100vh;
+    min-height: 720px;
+
+    background-image: url('../../../public/assets/crew/background-crew-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
+    .meetyourcrew_container {
+        height: 100%;
+        height: 100%;
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 0 75px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        .meetyourcrew_box-people {
+            width: 100%;
+            height: 70%;
+            max-height: 750px;
+            display: grid;
+            grid-template-areas: 
+            "about person"
+            "list person"
+            ;
+            justify-content: start;
+            align-items: end;
+            grid-column: 2;
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 80% 20%;
+
+
+            .crew_list {
+                grid-area: list;
+                display: flex;
+                width: 25%;
+                padding-left: 0;
+                justify-content: space-between;
+                align-self: start;
+                
+                .crew_list-point {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: rgba($--principal-white, 0.6);
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgba($--principal-white, 0.8);
+                    }
+                    &:active {
+                        width: 19px;
+                        height: 19px;
+                    }
+                }
+                .active {
+                    background-color: $--principal-white;
+                }
+
+                @media screen {   
+                    @media (max-width: 1060px) {
+                        margin: 0 auto;
+                        width: 20%;
+                        min-width: 130px;
+                    }
+                    @media (max-width: 700px) {
+                        align-self: center;
+                    }
+                }
+            }
+
+            .person {
+                grid-area: person;
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                align-self: center;
+
+                .person_image {
+                    height: 100%;
+                    max-height: 700px;
+                }
+
+                @media screen {   
+                    @media (max-width: 700px) {
+                        height: 90%;
+                        border-bottom: 1px solid rgba($--principal-white, 0.3);
+                    }
+                }
+            }
+
+            .person_infos {
+                grid-area: about;
+                align-self: center;
+
+                .person_infos-role {
+                    font-size: 3rem;
+                    font-family: $--font-Bellefair;
+                    font-weight: 100;
+                    text-transform: uppercase   ;
+                    color: rgba($--principal-white, 0.6);
+
+                    @media screen {
+                        @media (max-width: 700px) {
+                            font-size: 2.2rem;                    
+                        }
+                    }
+                }
+                .person_infos-name {
+                    font-size: 5rem;
+                    font-family: $--font-Bellefair;
+                    font-weight: 100;
+                    text-transform: uppercase   ;
+                    color: $--principal-white;
+                    margin: 15px 0 20px 0;
+                    white-space: nowrap;
+
+                    @media screen {
+                        @media (max-width: 700px) {
+                            font-size: 3.3rem;
+                            margin: 10px 0 15px 0;
+                        }
+                    }
+                }
+                .person_infos-bio {
+                    font-family: $--font-BarlowCondensed;
+                    font-size: 2rem;
+                    width: 400px;
+                    color: $--secundary-white;
+                    line-height: 150%;
+
+                    @media (max-width: 1060px) {
+                        margin: 0 auto;
+                        width: 80%;
+                        font-size: 2.2rem;
+                        line-height: 160%;
+                        min-width: 380px;
+                    }
+                    @media (max-width: 700px) {
+                        width: 90%;
+                        font-size: 2rem;
+                        min-width: 290px;
+                        line-height: 150%;
+                    }
+                }
+            }
+
+            @media screen {
+                @media (max-width: 1060px) {
+                    max-height: none;
+                    grid-template-areas: 
+                    "about"
+                    "list"
+                    "person"
+                    ;
+                    grid-template-columns: 100%;
+                    grid-template-rows: 35% 5% 60%;
+                    height: 80%;
+                    text-align: center;
+                }
+                @media (max-width: 860px) {
+                    height: 85%;
+                }
+                @media (max-width: 800px) {
+                    height: 82%;
+                }
+
+                @media (max-width: 700px) {
+                    grid-template-areas:
+                    "person"
+                    "list"
+                    "about"
+                    ;
+                    grid-template-rows: 48% 9% 43%;
+                }
+            }
+        }
+
+        @media screen {
+            @media (max-width: 1160px) {
+                padding: 0 40px;
+            }
+            @media (max-width: 1080px) {
+                min-height: 1000px;
+                padding: 0 30px;
+            }
+            @media (max-width: 800px) {
+                min-height: 900px;
+            }
+            @media (max-width: 700px) {
+                padding: 0;
+                min-height: 0;
+            }
+        }
+    }
+
+    @media screen {
+        @media (max-width: 1060px) {
+            background-image: url('../../../public/assets/crew/background-crew-tablet.jpg');
+        }
+        @media (max-width: 700px) {
+            background-image: url('../../../public/assets/crew/background-crew-mobile.jpg');
+        }  
+    }
+}
