@@ -288,7 +288,7 @@
     }
     @media screen {
         @media (max-width: 1024px) {
-            // overflow: scroll;
+            overflow: scroll;
             align-items: flex-end;
 
             justify-content: flex-end;
