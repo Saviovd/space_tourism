@@ -24,6 +24,7 @@ function PickYourDestiny() {
                         <li className={`planet_list-name ${ isVisible === 3 ? 'active' : ''}`} onClick={() => setIsVisible(3)}>{destinations[3].name}</li>
                     </ul>
 
+                {/* {isVisible === (isVisible) && <> */}
                     <div key={isVisible} className='planet'>
                         <img className='planet_image' src={destinations[isVisible].images.webp} alt={destinations[isVisible].name} />
                     </div>
@@ -38,6 +39,7 @@ function PickYourDestiny() {
                             <span className='planet_infos-travel'>{destinations[isVisible].travel}</span>
                         </div>
                     </div>
+                    {/* </>} */}
                 </div>
             </div>
         </div>

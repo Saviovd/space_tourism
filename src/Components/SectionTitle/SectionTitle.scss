@@ -7,19 +7,19 @@
     font-weight: 100;
     letter-spacing: 5px;
     color: $--principal-white;
-    font-size: 3.5rem;
+    font-size: 3rem;
     align-self: flex-start;
 
     .SectionTitle_number {
         font-family: $--font-BarlowCondensed;
         font-weight: bold;
         color: rgba($color: $--secundary-white, $alpha: .8);
-        font-size: 3.5rem;
+        font-size: 3rem;
         margin-right: 20px;
 
         @media screen {
             @media (max-width: 1024px) {
-                font-size: 3rem;
+                font-size: 2.6rem;
             }
             @media (max-width: 700px) {
                 font-size: 2.3rem;
@@ -30,7 +30,7 @@
 
     @media screen {
         @media (max-width: 1024px) {
-            font-size: 3rem;
+            font-size: 2.6rem;
         }
         @media (max-width: 700px) {
             align-self: center;

@@ -11,7 +11,7 @@ function SpaceTechnology() {
 
     return (
         <div className="SpaceTechnology">
-                    <div className="spacetechnology_container">
+            <div className="spacetechnology_container">
                 <SectionTitle style={{marginLeft: "40px"}} title='space launch 101' number='03'/>
                 <div className='spacetechnology_box'>
 

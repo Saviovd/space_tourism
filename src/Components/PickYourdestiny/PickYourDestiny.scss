@@ -3,7 +3,7 @@
 .PickYourDestiny {
     width: 100%;
     height: 100vh;
-    min-height: 740px;
+    min-height: 640px;
 
     background-image: url('../../../public/assets/destination/background-destination-desktop.jpg');
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@
         width: 100%;
         max-width: 2000px;
         margin: 0 auto;
-        height: 80%;
+        height: calc(100% - 110px);
         max-height: 920px;
         min-width: 600px;
         padding: 0 100px;
@@ -46,9 +46,9 @@
             .planet {
                 grid-area: planet-image;
                 text-align: center;
-                
+
                 .planet_image {
-                    min-width: 400px;
+                    min-width: 300px;
                     width: 50%;
                     -webkit-box-shadow: 1px 4px 41px -30px rgba(255,252,255,1);
                     -moz-box-shadow: 1px 4px 41px -30px rgba(255,252,255,1);
@@ -66,14 +66,30 @@
 
                     @media screen {
                         @media (max-width: 1024px) {
-                            min-width: 230px;
-                            // margin-top: 30px; 
+                            min-width: 290px;
+                            width: 40%;
+                        }
+                        @media (max-width: 768px) {
+                            width: 50%;
+                        }
+                        @media (max-width: 340px) {
+                            min-width: 260px;
                         }
                     }
                 }
                 @media screen {
                     @media (max-width: 1024px) {
                         margin-top: 30px; 
+                        max-height: 450px;
+                        min-height: 275px;
+                        margin: 80px 0 25px 0;
+                    }
+                    @media (max-width: 700px) {
+                        margin: 50px 0 10px 0;
+                        min-height: 300px;
+                    }
+                    @media (max-width: 550px) {
+                        margin: 30px 0 10px 0;
                     }
                 }
             }
@@ -88,7 +104,7 @@
                     font-family: $--font-BarlowCondensed;
                     text-transform: uppercase;
                     color: $--principal-white;
-                    font-size: 2.6rem;
+                    font-size: 2.2rem;
                     margin: 0 40px;
                     position: relative;
                     margin-left: 0;
@@ -141,22 +157,25 @@
                     
                     @media screen {
                         @media (max-width: 1024px) {
-                            font-size: 10rem;
+                            font-size: 8rem;
                         }
                         @media (max-width: 600px) {
-                            font-size: 8.6rem;
+                            font-size: 7.5rem;
                         }
                     }
                 }
                 .planet_infos-description {
-                    font-size: 2.3rem;
+                    font-size: 2rem;
                     line-height: 130%;
                     font-weight: 100;
                     color: $--secundary-white;
                     font-family: $--font-BarlowCondensed;
 
                     border-bottom: 1px solid $--principal-white-opacity;
-                    padding-bottom: 40px;
+                    padding-bottom: 30px;
+                    margin: 10px 0 10px 0;
+
+                    min-height: 100px;
 
                     @media screen {
                         @media (max-width: 1024px) {
@@ -164,8 +183,13 @@
                             margin: 0 auto;
                             min-width: 250px;
                         }
+                        @media (max-width: 900px) {
+                            min-height: 70px;
+                        }
                         @media (max-width: 580px) {
                             width: 90%;
+                            min-height: 60px;
+                            font-size: 1.9rem;
                         }
                     }
                 }
@@ -247,7 +271,8 @@
                                 "est"
                                 "travel"
                             ;
-                            height: 200px;
+                            height: 170px;
+                            margin: 0px 0 20px 0;
                         }
                     }
                 }
@@ -275,14 +300,15 @@
             }
             @media (max-width: 1024px) {
                 padding: 0 25px;
-                height: auto;
+                height: calc(100% - 140px);
                 justify-content: normal;
                 max-height: none;
                 overflow: hidden;
             }
-            @media (max-width: 600px) {
+            @media (max-width: 700px) {
                 min-width: 300px;
                 padding: 0;
+                height: calc(100% - 110px);
             }
         }
     }
@@ -294,7 +320,7 @@
             justify-content: flex-end;
             text-align: center;
 
-            min-height: 1100px;
+            min-height: 1000px;
 
             background-image: url('../../../public/assets/destination/background-destination-tablet.jpg');
         }
